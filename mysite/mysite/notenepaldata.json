@@ -1,0 +1,47 @@
+[
+  {
+    "pattern": ["hello", "hi", "hey", "good morning", "good afternoon"],
+    "answer": "Hi! Welcome to Notebook Hub. How can I help you find your notes?"
+  },
+  {
+    "pattern": ["what is this website", "tell me about this website", "what is notenepal", "what do you offer"],
+    "answer": "NoteNepal Hub is a website where you can find notes for many books of class 11 ,class12,Loksewa Ayog and Bachelor level, organized by subject and topic."
+  },
+  {
+    "pattern": ["how to search notes", "find notes", "where can I find notes", "search book notes"],
+    "answer": "You can use the search bar at the top of the page to find notes for any book or subject."
+  },
+  {
+    "pattern": ["are the notes free", "cost of notes", "do I have to pay", "price"],
+    "answer": "All the notes on Notebook Hub are completely free for students to access."
+  },
+  {
+    "pattern": ["which books are available", "list of books", "available book notes", "books on website"],
+    "answer": "We have notes for hundreds of books across various subjects. You can browse by category or search for a specific book."
+  },
+  {
+    "pattern": ["how to download notes", "download book notes", "save notes", "get notes offline"],
+    "answer": "Click on the note you want, then use the download button to save it as a PDF or text file."
+  },
+  {
+    "pattern": ["contact support", "help", "need assistance", "problem with website"],
+    "answer": "If you need help, you can contact our support team via the contact page or email us at birendrabohara091@gmail.com."
+  },
+  {
+    "pattern": ["bye", "goodbye", "see you later", "thanks", "thank you"],
+    "answer": "Goodbye! Feel free to come back anytime for more notes."
+  },
+  {
+    "pattern": ["owner of this website","who","owner of website","who make this website","developed this website","owner"],
+    "answer": "This website is developed by Birendra Bohara for students with the help of Ritik Mandal."
+  },
+  {
+    "pattern": ["notes","note"," Give Note for ","Note for","class 11 notes","subject notes","English note","nepali note","math note","biology note","physics note"],
+    "answer": "Note for your subject is my website url is here"
+  },
+  {
+    "pattern": ["muge","machikne","randi","bhalu","loide","jhatu","randi ko ban","sale","motherfucker","bitch"],
+    "answer": "Machikne I am chatbot for you to help .You randi bhalu get out from my website. "
+
+  }
+]

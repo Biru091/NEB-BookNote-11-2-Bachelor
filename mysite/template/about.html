@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'note.css' %}">
+
+</head>
+<body>
+<nav class="navbar">
+    <div>
+    <div class="logo">Notenepal
+        <img src="https://www.animatedimages.org/data/media/839/animated-nepal-flag-image-0007.gif" alt="nepali flag" class="shaking-flag">
+    </div >
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hSn4h_iV4OMqjMPE8C92O3Gjgl7TQv_R0pSAX6iS42Ny-jSI_HzIHgU&s" width="80" height="30">
+
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#neb">NEB+2</a>
+        <a href="">Bachelor</a>
+        <a href="{% url 'loksewa'%}">Loksewa</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+
+
+<div>
+
+    <h1>Hello</h1>
+
+
+</div>
+
+<script src="{% static 'note.js' %}"></script>
+
+</body>
+</html>

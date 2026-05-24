@@ -1,0 +1,300 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notenepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://thumbs.dreamstime.com/b/basic-rgb-199840748.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{% static 'note.css' %}">
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div>
+    <div class="logo">Notenepal
+        <img src="https://www.animatedimages.org/data/media/839/animated-nepal-flag-image-0007.gif" alt="nepali flag" class="shaking-flag">
+    </div >
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hSn4h_iV4OMqjMPE8C92O3Gjgl7TQv_R0pSAX6iS42Ny-jSI_HzIHgU&s" width="80" height="30">
+
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#neb">NEB+2</a>
+        <a href="">Bachelor</a>
+        <a href="{% url 'loksewa'%}">Loksewa</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+ <section class="hero-section">
+  <div class="hero-left">
+    <h1>Find Notes and Resources Easily</h1>
+      <p>An Online Learning Platform for student.</p>
+    <form class="search-form">
+      <input type="text" placeholder="Search notes, subjects, or papers..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div class="hero-right">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQ6WUuGRQC2X58nt4HppJCN5JE_Wdl8njWg&s" alt="Hero Image" />
+  </div>
+    <div class="chat_bot">
+    <img
+        class="bt"
+        src="https://assets-v2.lottiefiles.com/a/1d64f64e-dfe1-11ee-a390-a7bd47dd18d6/FTAiTAPwxd.gif"
+        width="130"
+        height="130"
+        id="openBot"
+        style="cursor:pointer;"
+    >
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<div id="botPopup">
+    <div class="botBox">
+        <span id="closeBot">×</span>
+
+        <form id="botForm">
+            {% csrf_token %}
+            <input type="text" id="question" placeholder="Ask something..." required>
+            <button type="submit">Ask</button>
+        </form>
+
+        <div id="resultBox"></div>
+    </div>
+</div>
+
+<div class="bire">
+ <div class="class-box">
+
+
+        <div class="notes-container">
+            <div class="note-card1">
+            <div class="note-info1">
+                <h2>Class 11</h2>
+                <p>All Subjects Notes</p>
+            </div>
+            <div class="note-actions1">
+                <a href="#neb" target="_blank" class="btn view">View</a>
+            </div>
+        </div>
+
+
+            <div class="note-card1">
+            <div class="note-info1">
+                <h2>Class 12</h2>
+                <p>All Subjects Notes</p>
+            </div>
+            <div class="note-actions1">
+                <a href="/class_12" target="_blank" class="btn view">View</a>
+            </div>
+        </div>
+
+          <div class="note-card1">
+            <div class="note-info1">
+                <h2>Loksewa</h2>
+                <p>Questions and Notes</p>
+            </div>
+            <div class="note-actions1">
+                <a href="#" class="btn view" onclick="showLoks()">View</a>
+
+
+            </div>
+        </div>
+
+        </div>
+     </div>
+</div>
+
+
+
+
+
+<div class="loksewa_choice">
+
+    <div class="choice1">
+        <a href="">Subba</a>
+        <a href="">Nayak Subba</a>
+        <a href="">Adhikirta</a>
+    </div>
+</div>
+<div class="overlay" id="overlay" onclick="closeLoks()"></div>
+
+
+
+
+
+
+
+<section class="classes-section" id="neb">
+    <p>On this website, you can easily access notes for ( कक्षा ११ and कक्षा १२ )NEB +2, Bachelor level, and ( लोकसेवा )Civil Service exam preparation. All subjects are provided in a well-organized and easy-to-understand format. Students can enhance their preparation with clear and concise study materials. The notes are available in Nepali language, making learning more effective. Through this website, you can access all curriculum-based content in one place. Regular updates ensure your preparation stays comprehensive and up-to-date.</p>
+
+    <div class="class-box">
+        <h3>Class 11</h3>
+        <p>All notes and subjects for Class 11</p>
+
+        <div class="notes-container">
+            <a href="/class_11" class="note-card">
+                <h4>English Notes</h4>
+
+            </a>
+            <a href="/class_11" class="note-card">
+                <h4>Math Notes</h4>
+
+            </a>
+            <a href="/class_11" class="note-card">
+                <h4>Chemistry</h4>
+            </a>
+            <a href="/class_11" class="note-card">
+                <h4>Computer</h4>
+            </a>
+        </div>
+    </div>
+
+    <div class="class-box">
+        <h3>Class 12</h3>
+        <p>All notes and subjects for Class 12</p>
+
+        <div class="notes-container">
+            <a href="/class_12" class="note-card">
+                <h4>English Notes</h4>
+
+            </a>
+            <a href="/class_12" class="note-card">
+                <h4>Math Notes</h4>
+
+            </a>
+            <a href="/class_12" class="note-card">
+                <h4>Chemistry</h4>
+
+            </a>
+            <a href="/class_12" class="note-card">
+                <h4>Computer</h4>
+
+            </a>
+        </div>
+    </div>
+    <div class="class-box">
+        <h3>Bachelor Level</h3>
+        <p>All notes and subjects for Bachelor level</p>
+
+        <div class="notes-container">
+            <a href="/page" class="note-card">
+                <h4>BCA</h4>
+
+            </a>
+            <a href="/page" class="note-card">
+                <h4>BBM</h4>
+
+            </a>
+            <a href="/page" class="note-card">
+                <h4>BIT</h4>
+            </a>
+            <a href="/page" class="note-card">
+                <h4>CSIT</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+         <div class="ending">
+            <h2 name="hello">Short and simple:</h2>
+            <p>Notenepal is your go-to platform for well-organized, easy-to-understand study notes. Learn smarter, revise faster, and boost your confidence with our curated resources.</p>
+            <h2>Slightly Longer:</h2>
+            <p>At Notenepal, we provide students with high-quality notes for all classes and subjects. Our goal is to make learning simple, effective, and stress-free, helping you excel in your exams and strengthen your knowledge.</p>
+            <h3>Friendly & Engaging:</h3>
+            <p>Notenepal – where studying becomes simple and fun! We offer concise, easy-to-read notes that help you grasp concepts quickly and prepare efficiently. Your success is our mission!</p>
+         </div>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <h3>Notenepal</h3>
+      <p>In a partnership with CO.CEO Ritik Mandal. </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/bi.rendra.815656" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <!-- Add more -->
+        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      </div>
+        <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <form id="contactForm"  method="post">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© Notenepal. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<script src="{% static 'note.js' %}"></script>
+
+ </body>
+
+</html>

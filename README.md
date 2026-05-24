@@ -13,3 +13,7 @@ Easy navigation between subjects and topics
 Tech Stack
 Backend: Django (Python)
 Frontend: HTML, CSS, JavaScript
+
+Note
+
+This is a demo project with pre-added notes only. Users can browse existing content but cannot create or upload new notes.
